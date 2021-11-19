@@ -55,10 +55,91 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calculateResults(): String {
+
+        val digitsOperators = digitsOperator()
+        if(digitsOperators.isEmpty()) return ""
+
+        val timesDivision =  timesDivisionCalculate(digitsOperators)
+        if(timesDivision.isEmpty()) return ""
+
+        val result = addSubtractClaculate(timesDivision)
         return ""
     }
 
-    /*private fun digitsOperator(): MutableList<Any> {
+    private fun addSubtractClaculate(passedList: MutableList<Any>): Flaot
+    {
+        var result = passedList[0] as Float
+
+        for(i in passedList.indices)
+        {
+            if(passedList[i] is char && i != passedList.index)
+            {
+                val operator = passedList[i]
+                val nextDigit = passedList[i + 1] as Flaot
+                if(operator == '+'){
+                    result += nextDigit
+                }
+
+                if(operator == '-')
+                    result -= nextDigit
+
+            }
+        }
+
+        return result
+    }
+
+    private fun timesDivisionCalculate(passedList: MutableList<Any>): MutableList<Any>
+    {
+        var list = passedList
+        while (list.contains('*') || list.contains('/'))
+            {
+                list = calcTimesDiv(list)
+            }
+        return  list
+    }
+
+    private fun calcTimesDiv(passedlist: MutableList<Any>): MutableList<Any>
+    {
+        val newList = MutableListOf<Any>()
+
+        var restartIndex = passedlist.size
+
+        for (i in passedlist.indices)
+        {
+            if(passedlist[i] is char && i != passedlist.lastIndex && i < restartIndex)
+            {
+                val operator = passedlist[i]
+                val preDigit = passedlist[i - 1] as Float
+                val nextDigit = passedlist[i + 1] as Float
+                when(operator)
+                {
+                    '*' ->
+                    {
+                        newList.add(preDigit * nextDigit)
+                        restartIndex = i + 1
+                    }
+                    '/' ->
+                    {
+                        newList.add(preDigit / nextDigit)
+                        restartIndex = i + 1
+                    }
+                    else ->
+                    {
+                        newList.add(preDigit)
+                        newList.add(operator)
+                    }
+                }
+            }
+            if (i > restartIndex)
+                newList.add(passedlist[i])
+
+        }
+
+        return newList
+    }
+
+    private fun digitsOperator(): MutableList<Any> {
         val list = mutableListOf<Any>()
         var currentDigit = ""
 
@@ -71,5 +152,10 @@ class MainActivity : AppCompatActivity() {
                 list.add(character)
             }
         }
-    }*/
+
+        if(currentDigit != "")
+            list.add(currentDigit.toFloat())
+
+        return list
+    }
 }

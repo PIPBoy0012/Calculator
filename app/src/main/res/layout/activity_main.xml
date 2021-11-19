@@ -12,11 +12,11 @@
         android:layout_width="382dp"
         android:layout_height="0dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="5dp"
         android:hint="Calculator"
-        android:textSize="40sp"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -33,7 +33,7 @@
     <androidx.gridlayout.widget.GridLayout
         android:id="@+id/gridLayout"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
@@ -41,6 +41,7 @@
         app:columnCount="4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:orientation="horizontal"
@@ -58,36 +59,36 @@
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="allClearAction"
                 android:text="AC"
-                android:textSize="24sp"
-                android:onClick="allClearAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/backspace"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="backSpaceAction"
                 android:text="\u232b"
-                android:textSize="24sp"
-                android:onClick="backSpaceAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/procent"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="operationAction"
                 android:text="%"
-                android:textSize="24sp"
-                android:onClick="operationAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/divid"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="operationAction"
                 android:text="/"
-                android:textSize="24sp"
-                android:onClick="operationAction"/>
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -102,36 +103,36 @@
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="7"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/eight"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="8"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/nine"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="9"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/multiplie"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="operationAction"
                 android:text="*"
-                android:textSize="24sp"
-                android:onClick="operationAction"/>
+                android:textSize="24sp" />
 
         </TableRow>
 
@@ -147,36 +148,36 @@
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="4"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/five"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="5"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/six"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="6"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/subtract"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="operationAction"
                 android:text="-"
-                android:textSize="24sp"
-                android:onClick="operationAction"/>
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -191,36 +192,36 @@
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="1"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/two"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="2"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/three"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="3"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/add"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="operationAction"
                 android:text="+"
-                android:textSize="24sp"
-                android:onClick="operationAction"/>
+                android:textSize="24sp" />
         </TableRow>
 
         <TableRow
@@ -244,18 +245,18 @@
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="numberAction"
                 android:text="0"
-                android:textSize="24sp"
-                android:onClick="numberAction"/>
+                android:textSize="24sp" />
 
             <Button
                 android:id="@+id/equal"
                 android:layout_width="43pt"
                 android:layout_height="43pt"
                 android:background="#000000"
+                android:onClick="equalsAction"
                 android:text="="
-                android:textSize="24sp"
-                android:onClick="equalsAction"/>
+                android:textSize="24sp" />
         </TableRow>
     </androidx.gridlayout.widget.GridLayout>
 
