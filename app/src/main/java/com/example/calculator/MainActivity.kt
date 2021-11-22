@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity() {
 
     fun allClearAction(view: View) {
         textView.text = ""
-
     }
 
     fun backSpaceAction(view: View) {
